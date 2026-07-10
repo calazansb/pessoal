@@ -1,0 +1,11 @@
+# Dados locais (histórico, sessão de login, credenciais) — nunca commitar
+data/
+*.db
+session.json
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
