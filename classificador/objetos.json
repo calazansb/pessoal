@@ -1,0 +1,317 @@
+{
+  "objetos": [
+    {
+      "id": "negativa_procedimento",
+      "nome": "Negativa de cobertura — procedimento / cirurgia",
+      "termos": [
+        {"t": "negativa de cobertura", "peso": 3},
+        {"t": "recusa de cobertura", "peso": 3},
+        {"t": "negou a cobertura", "peso": 3},
+        {"t": "negou autorização", "peso": 3},
+        {"t": "autorização do procedimento", "peso": 3},
+        {"t": "procedimento cirúrgico", "peso": 2},
+        {"t": "rol da ans", "peso": 2},
+        {"t": "médico assistente", "peso": 2},
+        "obrigação de fazer",
+        "tutela de urgência",
+        "cirurgia",
+        "internação"
+      ]
+    },
+    {
+      "id": "negativa_medicamento",
+      "nome": "Negativa de cobertura — medicamento",
+      "termos": [
+        {"t": "fornecimento do medicamento", "peso": 4},
+        {"t": "medicamento de alto custo", "peso": 4},
+        {"t": "medicamento prescrito", "peso": 3},
+        {"t": "uso off label", "peso": 4},
+        {"t": "off-label", "peso": 4},
+        {"t": "registro na anvisa", "peso": 3},
+        {"t": "medicamento domiciliar", "peso": 3},
+        "anvisa",
+        "medicamento"
+      ]
+    },
+    {
+      "id": "negativa_opme",
+      "nome": "Negativa de cobertura — OPME (órteses, próteses e materiais)",
+      "termos": [
+        {"t": "opme", "peso": 5},
+        {"t": "órteses e próteses", "peso": 4},
+        {"t": "materiais especiais", "peso": 3},
+        {"t": "material cirúrgico", "peso": 3},
+        {"t": "órtese", "peso": 3},
+        {"t": "prótese", "peso": 3},
+        "stent",
+        "marcapasso"
+      ]
+    },
+    {
+      "id": "home_care",
+      "nome": "Home care / internação domiciliar",
+      "termos": [
+        {"t": "home care", "peso": 5},
+        {"t": "atenção domiciliar", "peso": 4},
+        {"t": "internação domiciliar", "peso": 4},
+        {"t": "fisioterapia domiciliar", "peso": 3},
+        {"t": "enfermagem 24 horas", "peso": 3},
+        "cuidador"
+      ]
+    },
+    {
+      "id": "tea_terapias",
+      "nome": "TEA / terapias multidisciplinares (ABA)",
+      "termos": [
+        {"t": "transtorno do espectro autista", "peso": 5},
+        {"t": "método aba", "peso": 5},
+        {"t": "análise do comportamento aplicada", "peso": 5},
+        {"t": "terapia multidisciplinar", "peso": 3},
+        {"t": "sessões ilimitadas", "peso": 3},
+        {"t": "musicoterapia", "peso": 3},
+        {"t": "equoterapia", "peso": 3},
+        {"t": "psicopedagogia", "peso": 3},
+        {"t": "tea", "peso": 2},
+        {"t": "autismo", "peso": 3},
+        "fonoaudiologia",
+        "terapia ocupacional"
+      ]
+    },
+    {
+      "id": "oncologico",
+      "nome": "Tratamento oncológico",
+      "termos": [
+        {"t": "tratamento oncológico", "peso": 5},
+        {"t": "quimioterapia", "peso": 4},
+        {"t": "radioterapia", "peso": 4},
+        {"t": "imunoterapia", "peso": 4},
+        {"t": "neoplasia maligna", "peso": 4},
+        {"t": "antineoplásico", "peso": 4},
+        {"t": "oncologista", "peso": 3},
+        {"t": "câncer", "peso": 2}
+      ]
+    },
+    {
+      "id": "bariatrica",
+      "nome": "Cirurgia bariátrica / plástica reparadora",
+      "termos": [
+        {"t": "cirurgia bariátrica", "peso": 5},
+        {"t": "gastroplastia", "peso": 4},
+        {"t": "obesidade mórbida", "peso": 4},
+        {"t": "dermolipectomia", "peso": 4},
+        {"t": "cirurgia plástica reparadora", "peso": 4},
+        {"t": "imc", "peso": 2}
+      ]
+    },
+    {
+      "id": "reproducao_assistida",
+      "nome": "Reprodução assistida / fertilização in vitro",
+      "termos": [
+        {"t": "fertilização in vitro", "peso": 5},
+        {"t": "reprodução assistida", "peso": 5},
+        {"t": "inseminação artificial", "peso": 4},
+        {"t": "congelamento de óvulos", "peso": 4},
+        {"t": "fiv", "peso": 3},
+        {"t": "infertilidade", "peso": 3}
+      ]
+    },
+    {
+      "id": "psiquiatrica",
+      "nome": "Internação psiquiátrica / dependência química",
+      "termos": [
+        {"t": "internação psiquiátrica", "peso": 5},
+        {"t": "dependência química", "peso": 4},
+        {"t": "clínica de reabilitação", "peso": 4},
+        {"t": "transtorno psiquiátrico", "peso": 3},
+        {"t": "surto psicótico", "peso": 3},
+        {"t": "esquizofrenia", "peso": 3},
+        {"t": "limite de dias de internação", "peso": 4}
+      ]
+    },
+    {
+      "id": "urgencia_emergencia",
+      "nome": "Urgência e emergência",
+      "termos": [
+        {"t": "atendimento de urgência", "peso": 4},
+        {"t": "urgência e emergência", "peso": 4},
+        {"t": "carência para urgência", "peso": 4},
+        {"t": "pronto-socorro", "peso": 3},
+        {"t": "pronto socorro", "peso": 3},
+        {"t": "risco imediato de vida", "peso": 3}
+      ]
+    },
+    {
+      "id": "carencia_preexistente",
+      "nome": "Carência / doença preexistente (CPT)",
+      "termos": [
+        {"t": "doença preexistente", "peso": 5},
+        {"t": "cobertura parcial temporária", "peso": 5},
+        {"t": "prazo de carência", "peso": 4},
+        {"t": "período de carência", "peso": 4},
+        {"t": "declaração de saúde", "peso": 4},
+        {"t": "cpt", "peso": 3},
+        "carência"
+      ]
+    },
+    {
+      "id": "reembolso",
+      "nome": "Reembolso de despesas médicas",
+      "termos": [
+        {"t": "reembolso integral", "peso": 4},
+        {"t": "tabela de reembolso", "peso": 4},
+        {"t": "reembolso", "peso": 3},
+        {"t": "livre escolha", "peso": 3},
+        {"t": "prestador não credenciado", "peso": 3},
+        {"t": "despesas médicas", "peso": 2},
+        "notas fiscais"
+      ]
+    },
+    {
+      "id": "reajuste_faixa_etaria",
+      "nome": "Reajuste por faixa etária",
+      "termos": [
+        {"t": "reajuste por faixa etária", "peso": 5},
+        {"t": "mudança de faixa etária", "peso": 4},
+        {"t": "estatuto do idoso", "peso": 4},
+        {"t": "59 anos", "peso": 3},
+        {"t": "faixa etária", "peso": 2}
+      ]
+    },
+    {
+      "id": "reajuste_sinistralidade",
+      "nome": "Reajuste anual / sinistralidade (coletivos)",
+      "termos": [
+        {"t": "reajuste por sinistralidade", "peso": 5},
+        {"t": "índice de reajuste", "peso": 3},
+        {"t": "reajuste anual", "peso": 3},
+        {"t": "reajuste abusivo", "peso": 3},
+        {"t": "sinistralidade", "peso": 3},
+        {"t": "plano coletivo empresarial", "peso": 2},
+        {"t": "plano coletivo por adesão", "peso": 2}
+      ]
+    },
+    {
+      "id": "rescisao_unilateral",
+      "nome": "Rescisão unilateral / cancelamento do contrato",
+      "termos": [
+        {"t": "rescisão unilateral", "peso": 5},
+        {"t": "cancelamento indevido", "peso": 4},
+        {"t": "restabelecimento do plano", "peso": 4},
+        {"t": "resilição unilateral", "peso": 4},
+        {"t": "cancelamento do contrato", "peso": 3},
+        {"t": "notificação prévia", "peso": 3},
+        {"t": "manutenção do contrato", "peso": 2},
+        {"t": "inadimplência", "peso": 2}
+      ]
+    },
+    {
+      "id": "aposentado_demitido",
+      "nome": "Manutenção de aposentado / demitido (arts. 30 e 31)",
+      "termos": [
+        {"t": "manutenção da condição de beneficiário", "peso": 5},
+        {"t": "demitido sem justa causa", "peso": 4},
+        {"t": "ex-empregado", "peso": 3},
+        {"t": "contribuição integral", "peso": 3},
+        {"t": "lei 9.656", "peso": 2},
+        {"t": "aposentado", "peso": 2},
+        "aposentadoria"
+      ]
+    },
+    {
+      "id": "portabilidade",
+      "nome": "Portabilidade de carências",
+      "termos": [
+        {"t": "portabilidade de carências", "peso": 5},
+        {"t": "portabilidade", "peso": 3},
+        {"t": "plano de origem", "peso": 3},
+        {"t": "plano de destino", "peso": 3},
+        {"t": "compatibilidade de planos", "peso": 3}
+      ]
+    },
+    {
+      "id": "rede_credenciada",
+      "nome": "Rede credenciada / descredenciamento",
+      "termos": [
+        {"t": "descredenciamento", "peso": 5},
+        {"t": "substituição do prestador", "peso": 4},
+        {"t": "rede credenciada", "peso": 3},
+        {"t": "hospital credenciado", "peso": 2},
+        {"t": "clínica credenciada", "peso": 2}
+      ]
+    },
+    {
+      "id": "glosa_prestador",
+      "nome": "Cobrança de prestador — glosas / faturamento",
+      "termos": [
+        {"t": "glosa", "peso": 4},
+        {"t": "glosas", "peso": 4},
+        {"t": "faturamento hospitalar", "peso": 4},
+        {"t": "contrato de credenciamento", "peso": 4},
+        {"t": "notas fiscais de serviço", "peso": 3},
+        {"t": "ação de cobrança", "peso": 3},
+        {"t": "tuss", "peso": 3},
+        {"t": "faturas em aberto", "peso": 3},
+        {"t": "contraprestação dos serviços", "peso": 2},
+        {"t": "serviços médico-hospitalares", "peso": 2},
+        "faturamento",
+        "inadimplemento"
+      ]
+    },
+    {
+      "id": "cobranca_mensalidades",
+      "nome": "Cobrança / monitória de mensalidades",
+      "termos": [
+        {"t": "mensalidades em atraso", "peso": 4},
+        {"t": "contraprestações pecuniárias", "peso": 4},
+        {"t": "inadimplemento das mensalidades", "peso": 4},
+        {"t": "ação monitória", "peso": 3},
+        {"t": "execução de título extrajudicial", "peso": 3},
+        {"t": "mensalidades", "peso": 2},
+        "boletos"
+      ]
+    },
+    {
+      "id": "inexistencia_debito",
+      "nome": "Inexistência de débito / cobrança indevida",
+      "termos": [
+        {"t": "inexistência de débito", "peso": 4},
+        {"t": "inexigibilidade do débito", "peso": 4},
+        {"t": "cobrança indevida", "peso": 3},
+        {"t": "negativação indevida", "peso": 3},
+        {"t": "inscrição indevida", "peso": 3},
+        "serasa",
+        "spc"
+      ]
+    },
+    {
+      "id": "coparticipacao",
+      "nome": "Coparticipação / fator moderador",
+      "termos": [
+        {"t": "coparticipação", "peso": 5},
+        {"t": "fator moderador", "peso": 4},
+        {"t": "percentual de coparticipação", "peso": 4},
+        {"t": "franquia", "peso": 2}
+      ]
+    },
+    {
+      "id": "ressarcimento_sus",
+      "nome": "Ressarcimento ao SUS",
+      "termos": [
+        {"t": "ressarcimento ao sus", "peso": 5},
+        {"t": "atendimento em unidade pública", "peso": 3},
+        {"t": "tunep", "peso": 4},
+        {"t": "abi", "peso": 2}
+      ]
+    },
+    {
+      "id": "danos_morais",
+      "nome": "Indenização por danos morais",
+      "termos": [
+        {"t": "indenização por danos morais", "peso": 3},
+        {"t": "danos morais", "peso": 2},
+        {"t": "dano moral", "peso": 2},
+        {"t": "abalo moral", "peso": 3}
+      ]
+    }
+  ]
+}

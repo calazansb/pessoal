@@ -1,3 +1,11 @@
+# Ferramentas pessoais
+
+- **[Classificador de Processos](classificador/README.md)** — lê o PDF de
+  um processo judicial e classifica o objeto da ação localmente, sem API
+  de IA. Modo lote gera planilha da carteira inteira.
+- **Instagram Follower Tracker** (abaixo) — acompanha seguidores e
+  seguindo, com histórico local.
+
 # Instagram Follower Tracker
 
 Ferramenta de linha de comando que acessa o seu Instagram, baixa a lista de
