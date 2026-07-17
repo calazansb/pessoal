@@ -1,3 +1,8 @@
+# Rastreador de Instagram
 instagrapi>=2.1.2
 pillow>=8.1.1
 rich>=13.0.0
+
+# Classificador de processos
+pymupdf>=1.24
+flask>=3.0

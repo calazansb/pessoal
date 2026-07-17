@@ -1,0 +1,179 @@
+{
+  "objetos": [
+    {
+      "id": "negativa_cobertura",
+      "nome": "Negativa de cobertura / Obrigação de fazer (saúde)",
+      "termos": [
+        {"t": "negativa de cobertura", "peso": 4},
+        {"t": "recusa de cobertura", "peso": 4},
+        {"t": "autorização do procedimento", "peso": 2},
+        {"t": "negou a cobertura", "peso": 3},
+        {"t": "obrigação de fazer", "peso": 2},
+        {"t": "rol da ans", "peso": 2},
+        {"t": "tratamento prescrito", "peso": 2},
+        "tutela de urgência",
+        "cirurgia",
+        "home care",
+        "internação"
+      ]
+    },
+    {
+      "id": "reembolso_saude",
+      "nome": "Reembolso de despesas médicas",
+      "termos": [
+        {"t": "reembolso", "peso": 3},
+        {"t": "reembolso integral", "peso": 4},
+        {"t": "despesas médicas", "peso": 2},
+        {"t": "prestador não credenciado", "peso": 3},
+        {"t": "livre escolha", "peso": 2},
+        "tabela de reembolso",
+        "notas fiscais"
+      ]
+    },
+    {
+      "id": "cobranca",
+      "nome": "Ação de cobrança",
+      "termos": [
+        {"t": "ação de cobrança", "peso": 4},
+        {"t": "notas fiscais de serviço", "peso": 2},
+        {"t": "contraprestação dos serviços", "peso": 2},
+        {"t": "faturas em aberto", "peso": 3},
+        {"t": "inadimplemento", "peso": 2},
+        "glosa",
+        "faturamento"
+      ]
+    },
+    {
+      "id": "monitoria",
+      "nome": "Ação monitória",
+      "termos": [
+        {"t": "ação monitória", "peso": 5},
+        {"t": "procedimento monitório", "peso": 4},
+        {"t": "prova escrita sem eficácia de título executivo", "peso": 4},
+        {"t": "mandado de pagamento", "peso": 2},
+        "embargos monitórios"
+      ]
+    },
+    {
+      "id": "execucao",
+      "nome": "Execução de título extrajudicial",
+      "termos": [
+        {"t": "execução de título extrajudicial", "peso": 5},
+        {"t": "ação de execução", "peso": 4},
+        {"t": "título executivo extrajudicial", "peso": 3},
+        {"t": "citação para pagar", "peso": 2},
+        "penhora",
+        "duplicata",
+        "nota promissória"
+      ]
+    },
+    {
+      "id": "cumprimento_sentenca",
+      "nome": "Cumprimento de sentença",
+      "termos": [
+        {"t": "cumprimento de sentença", "peso": 5},
+        {"t": "cumprimento definitivo", "peso": 3},
+        {"t": "impugnação ao cumprimento", "peso": 3},
+        {"t": "multa do art. 523", "peso": 3},
+        "trânsito em julgado"
+      ]
+    },
+    {
+      "id": "danos_morais",
+      "nome": "Indenização por danos morais",
+      "termos": [
+        {"t": "danos morais", "peso": 3},
+        {"t": "indenização por danos morais", "peso": 4},
+        {"t": "abalo moral", "peso": 3},
+        {"t": "negativação indevida", "peso": 3},
+        {"t": "inscrição indevida", "peso": 3},
+        "serasa",
+        "spc",
+        "constrangimento"
+      ]
+    },
+    {
+      "id": "danos_materiais",
+      "nome": "Indenização por danos materiais",
+      "termos": [
+        {"t": "danos materiais", "peso": 3},
+        {"t": "indenização por danos materiais", "peso": 4},
+        {"t": "lucros cessantes", "peso": 3},
+        {"t": "danos emergentes", "peso": 3},
+        "prejuízo material"
+      ]
+    },
+    {
+      "id": "reajuste_plano",
+      "nome": "Revisão de reajuste de plano de saúde",
+      "termos": [
+        {"t": "reajuste abusivo", "peso": 4},
+        {"t": "reajuste por faixa etária", "peso": 4},
+        {"t": "reajuste por sinistralidade", "peso": 4},
+        {"t": "revisão de mensalidade", "peso": 3},
+        {"t": "aumento da mensalidade", "peso": 2},
+        "estatuto do idoso"
+      ]
+    },
+    {
+      "id": "rescisao_contratual",
+      "nome": "Rescisão / manutenção de contrato",
+      "termos": [
+        {"t": "rescisão unilateral", "peso": 4},
+        {"t": "cancelamento do contrato", "peso": 3},
+        {"t": "manutenção do contrato", "peso": 3},
+        {"t": "resilição contratual", "peso": 3},
+        "notificação prévia",
+        "portabilidade"
+      ]
+    },
+    {
+      "id": "revisional",
+      "nome": "Ação revisional de contrato",
+      "termos": [
+        {"t": "ação revisional", "peso": 4},
+        {"t": "revisão contratual", "peso": 3},
+        {"t": "cláusula abusiva", "peso": 3},
+        {"t": "juros abusivos", "peso": 3},
+        "capitalização de juros",
+        "onerosidade excessiva"
+      ]
+    },
+    {
+      "id": "consignacao",
+      "nome": "Consignação em pagamento",
+      "termos": [
+        {"t": "consignação em pagamento", "peso": 5},
+        {"t": "ação consignatória", "peso": 4},
+        {"t": "depósito consignado", "peso": 3},
+        {"t": "recusa em receber", "peso": 3},
+        "mora do credor"
+      ]
+    },
+    {
+      "id": "declaratoria_inexistencia",
+      "nome": "Declaratória de inexistência de débito",
+      "termos": [
+        {"t": "inexistência de débito", "peso": 4},
+        {"t": "declaratória de inexistência", "peso": 4},
+        {"t": "inexigibilidade do débito", "peso": 4},
+        {"t": "cobrança indevida", "peso": 3},
+        "não reconhece a dívida"
+      ]
+    },
+    {
+      "id": "trabalhista",
+      "nome": "Reclamação trabalhista",
+      "termos": [
+        {"t": "reclamação trabalhista", "peso": 5},
+        {"t": "reclamante", "peso": 2},
+        {"t": "reclamada", "peso": 2},
+        {"t": "verbas rescisórias", "peso": 3},
+        {"t": "vínculo empregatício", "peso": 3},
+        "horas extras",
+        "ctps",
+        "vara do trabalho"
+      ]
+    }
+  ]
+}
