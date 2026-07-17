@@ -71,11 +71,15 @@ python -m classificador objetos
 
 ## Ajustando ao seu sistema
 
-Os objetos de ação vêm pré-configurados com casos comuns (negativa de
-cobertura, reembolso, cobrança, monitória, execução, cumprimento de
-sentença, danos morais/materiais, reajuste de plano, revisional,
-consignação, declaratória de inexistência, trabalhista…). **Edite-os para
-espelhar exatamente os objetos do seu sistema** — pela interface web ou
+Os objetos de ação vêm pré-configurados com os assuntos do contencioso
+de saúde suplementar, na visão de quem defende operadoras: negativas de
+cobertura por tipo (procedimento/cirurgia, medicamento, OPME, home care,
+TEA/terapias, oncológico, bariátrica, reprodução assistida, psiquiátrica),
+urgência/emergência, carência/CPT, reembolso, reajustes (faixa etária e
+sinistralidade), rescisão unilateral, arts. 30 e 31 da Lei 9.656,
+portabilidade, rede credenciada, glosas de prestador, mensalidades,
+inexistência de débito, coparticipação, ressarcimento ao SUS e danos
+morais. **Edite-os para espelhar exatamente os assuntos do seu sistema** — pela interface web ou
 direto no `classificador/objetos.json`:
 
 ```json

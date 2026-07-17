@@ -91,14 +91,14 @@ class TestClassificacao(unittest.TestCase):
     def test_negativa_de_cobertura(self):
         c = classificar_texto(PETICAO_NEGATIVA, self.objetos)
         self.assertEqual(c.status, "OK")
-        self.assertEqual(c.ranking[0].objeto.id, "negativa_cobertura")
+        self.assertEqual(c.ranking[0].objeto.id, "negativa_procedimento")
         self.assertEqual(c.numero_processo, "5012345-67.2024.8.13.0024")
         self.assertEqual(c.tribunal, "TJMG")
 
     def test_cobranca(self):
         c = classificar_texto(PETICAO_COBRANCA, self.objetos)
         self.assertEqual(c.status, "OK")
-        self.assertEqual(c.ranking[0].objeto.id, "cobranca")
+        self.assertEqual(c.ranking[0].objeto.id, "glosa_prestador")
 
     def test_texto_sem_relacao_vira_revisar(self):
         c = classificar_texto("receita de bolo de cenoura com chocolate", self.objetos)
@@ -156,9 +156,9 @@ class TestExtracaoEForLote(unittest.TestCase):
                 linhas = list(csv.DictReader(f, delimiter=";"))
         self.assertEqual(len(linhas), 2)
         self.assertEqual(
-            linhas[0]["objeto"], "Negativa de cobertura / Obrigação de fazer (saúde)"
+            linhas[0]["objeto"], "Negativa de cobertura — procedimento / cirurgia"
         )
-        self.assertEqual(linhas[1]["objeto"], "Ação de cobrança")
+        self.assertEqual(linhas[1]["objeto"], "Cobrança de prestador — glosas / faturamento")
         self.assertEqual({l["status"] for l in linhas}, {"OK"})
 
     def test_pdf_corrompido_reporta_erro(self):
@@ -206,18 +206,18 @@ class TestWeb(unittest.TestCase):
     def test_adicionar_e_remover_termo(self):
         self.cliente.post(
             "/objetos/termo/adicionar",
-            data={"objeto": "cobranca", "termo": "duplicata mercantil", "peso": "3"},
+            data={"objeto": "glosa_prestador", "termo": "duplicata mercantil", "peso": "3"},
         )
         objetos = carregar_objetos(self.objetos_json)
-        cobranca = next(o for o in objetos if o.id == "cobranca")
+        cobranca = next(o for o in objetos if o.id == "glosa_prestador")
         self.assertIn(("duplicata mercantil", 3), [(t.texto, t.peso) for t in cobranca.termos])
 
         self.cliente.post(
             "/objetos/termo/remover",
-            data={"objeto": "cobranca", "termo": "duplicata mercantil"},
+            data={"objeto": "glosa_prestador", "termo": "duplicata mercantil"},
         )
         objetos = carregar_objetos(self.objetos_json)
-        cobranca = next(o for o in objetos if o.id == "cobranca")
+        cobranca = next(o for o in objetos if o.id == "glosa_prestador")
         self.assertNotIn("duplicata mercantil", [t.texto for t in cobranca.termos])
 
     def test_adicionar_objeto(self):
