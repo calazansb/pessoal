@@ -1,3 +1,8 @@
+> **Projetos neste repositório:**
+> - **Instagram Follower Tracker** (este README, abaixo)
+> - **[Docling no Mac](docling-mac/README.md)** — instala o Docling e cria
+>   app + Ação Rápida para converter PDF/DOCX/PPTX em Markdown no macOS
+
 # Instagram Follower Tracker
 
 Ferramenta de linha de comando que acessa o seu Instagram, baixa a lista de

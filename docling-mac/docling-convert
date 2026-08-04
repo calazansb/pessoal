@@ -1,0 +1,99 @@
+#!/bin/bash
+#
+# docling-convert — converte documentos para Markdown (ou outro formato)
+# usando o Docling, salvando o resultado na mesma pasta do original.
+#
+# Uso:
+#   docling-convert arquivo.pdf [outro.docx ...]
+#   docling-convert --to html arquivo.pdf
+#   docling-convert --notify arquivo.pdf   # com notificações do macOS
+#
+# Formatos de saída: md (padrão), html, json, text, doctags
+# Formatos de entrada: PDF, DOCX, XLSX, PPTX, HTML, imagens (PNG/JPG/TIFF),
+#                      Markdown, AsciiDoc, CSV e mais.
+#
+set -uo pipefail
+
+export PATH="$HOME/.local/bin:$PATH"
+
+TO="md"
+NOTIFY=0
+FILES=()
+
+usage() { sed -n '2,15p' "$0" | sed 's/^# \{0,1\}//'; }
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --to)       TO="${2:?faltou o formato depois de --to}"; shift 2 ;;
+    --notify)   NOTIFY=1; shift ;;
+    -h|--help)  usage; exit 0 ;;
+    --*)        echo "Opção desconhecida: $1" >&2; usage; exit 1 ;;
+    *)          FILES+=("$1"); shift ;;
+  esac
+done
+
+notify() {  # notify "mensagem" "título"
+  if [[ "$NOTIFY" -eq 1 ]] && command -v osascript >/dev/null 2>&1; then
+    local msg="${1//\"/\\\"}" title="${2//\"/\\\"}"
+    osascript -e "display notification \"$msg\" with title \"$title\"" \
+      >/dev/null 2>&1 || true
+  fi
+}
+
+if [[ ${#FILES[@]} -eq 0 ]]; then
+  usage
+  exit 1
+fi
+
+DOCLING="$(command -v docling || true)"
+if [[ -z "$DOCLING" ]]; then
+  echo "❌ O comando 'docling' não foi encontrado. Rode o install.sh de novo." >&2
+  notify "Docling não está instalado. Rode o install.sh." "Docling"
+  exit 1
+fi
+
+case "$TO" in
+  md) EXT="md" ;; html|html_split_page) EXT="html" ;; json) EXT="json" ;;
+  text) EXT="txt" ;; doctags) EXT="doctags" ;; *) EXT="$TO" ;;
+esac
+
+OK=0
+FAIL=0
+LAST_OUT=""
+
+notify "Convertendo ${#FILES[@]} arquivo(s)... A primeira conversão pode demorar." "Docling"
+
+for f in "${FILES[@]}"; do
+  if [[ ! -f "$f" ]]; then
+    echo "⚠️  Ignorando (não é um arquivo): $f" >&2
+    FAIL=$((FAIL + 1))
+    continue
+  fi
+  DIR="$(cd "$(dirname "$f")" && pwd)"
+  BASE="$(basename "$f")"
+  STEM="${BASE%.*}"
+  echo "==> Convertendo: $BASE"
+  if "$DOCLING" --to "$TO" --output "$DIR" "$f"; then
+    LAST_OUT="$DIR/$STEM.$EXT"
+    echo "    ✅ Gerado: $LAST_OUT"
+    OK=$((OK + 1))
+  else
+    echo "    ❌ Falha ao converter: $f" >&2
+    FAIL=$((FAIL + 1))
+  fi
+done
+
+if [[ "$OK" -gt 0 && "$FAIL" -eq 0 ]]; then
+  notify "$OK arquivo(s) convertido(s) com sucesso." "Docling ✅"
+elif [[ "$OK" -gt 0 ]]; then
+  notify "$OK convertido(s), $FAIL falha(s)." "Docling ⚠️"
+else
+  notify "Nenhum arquivo foi convertido ($FAIL falha(s))." "Docling ❌"
+fi
+
+# No modo app/Ação Rápida, mostra o resultado no Finder
+if [[ "$NOTIFY" -eq 1 && -n "$LAST_OUT" && -f "$LAST_OUT" ]]; then
+  open -R "$LAST_OUT" 2>/dev/null || true
+fi
+
+[[ "$FAIL" -eq 0 ]]
