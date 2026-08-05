@@ -1,3 +1,14 @@
+# Pessoal
+
+Ferramentas pessoais de linha de comando:
+
+- **[Instagram Follower Tracker](#instagram-follower-tracker)** — acompanha
+  seguidores e mudanças no seu Instagram
+- **[Conversor de PDF para Markdown](#conversor-de-pdf-para-markdown-marker-2)** —
+  converte PDFs em `.md` usando o Marker 2
+
+---
+
 # Instagram Follower Tracker
 
 Ferramenta de linha de comando que acessa o seu Instagram, baixa a lista de
@@ -100,4 +111,57 @@ o histórico.
 
 ```bash
 python tests/test_tracker.py
+```
+
+---
+
+# Conversor de PDF para Markdown (Marker 2)
+
+Converte arquivos PDF em Markdown usando o
+[Marker 2](https://github.com/datalab-to/marker) (`marker-pdf` 2.0.0), que usa
+modelos de IA para reconhecer layout, tabelas, equações e fazer OCR de PDFs
+escaneados.
+
+## Instalação
+
+Requer Python 3.10+.
+
+```bash
+pip install -r requirements-pdf2md.txt
+```
+
+Em máquina **sem placa de vídeo NVIDIA**, instale antes o PyTorch de CPU para
+economizar ~3 GB de download:
+
+```bash
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+pip install -r requirements-pdf2md.txt
+```
+
+> ℹ️ Na **primeira conversão** o Marker baixa os modelos de IA (alguns GB) de
+> `models.datalab.to`. Depois disso ele funciona offline. Se estiver rodando em
+> ambiente com firewall/proxy (por exemplo, o Claude Code na web), é preciso
+> liberar os domínios `models.datalab.to` e `huggingface.co` na política de
+> rede.
+
+## Uso
+
+```bash
+python pdf2md.py documento.pdf               # converte um arquivo
+python pdf2md.py pasta/com/pdfs/             # converte todos os PDFs da pasta
+python pdf2md.py documento.pdf -o saida/     # escolhe a pasta de saída
+python pdf2md.py documento.pdf --paginas 0,5-10
+python pdf2md.py digitalizado.pdf --ocr      # força OCR (PDF escaneado)
+python pdf2md.py documento.pdf --modo fast   # mais rápido (ideal em CPU)
+```
+
+O resultado fica em `convertidos/<nome-do-pdf>/<nome-do-pdf>.md`, junto com as
+imagens extraídas e um JSON de metadados. A pasta `convertidos/` não vai para o
+git.
+
+Também dá para usar o Marker diretamente, sem o script:
+
+```bash
+marker_single documento.pdf --output_dir convertidos
+marker pasta/com/pdfs/ --output_dir convertidos
 ```
