@@ -1,0 +1,7 @@
+# Conversor de PDF para Markdown (veja pdf2md.py)
+marker-pdf==2.0.0
+
+# Dica: em máquina SEM placa de vídeo NVIDIA, instale antes o PyTorch de CPU,
+# que é bem mais leve (a versão padrão baixa ~3 GB de bibliotecas CUDA):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements-pdf2md.txt

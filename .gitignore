@@ -9,3 +9,6 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Saída do conversor de PDF (pdf2md.py)
+convertidos/
